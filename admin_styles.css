@@ -1,0 +1,255 @@
+/* Base styles */
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #7B7531;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.back-btn {
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  background-color: rgba(255,255,255,0.2);
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+}
+
+.page-title {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Orders Table */
+.orders-table {
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.orders-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders-table th, 
+.orders-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.orders-table th {
+  background-color: #f9f9f9;
+  font-weight: 600;
+  color: #555;
+}
+
+.orders-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Action Buttons */
+.actions-cell {
+  display: flex;
+  gap: 5px;
+}
+
+.edit-btn, .save-btn, .delete-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-btn {
+  background-color: #2196F3;
+  color: white;
+}
+
+.save-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.edit-btn:hover, .save-btn:hover, .delete-btn:hover {
+  opacity: 0.8;
+}
+
+/* Editable cells */
+.editable input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.payment-select {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  width: 100%;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.modal-actions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-actions button:first-child {
+  background-color: #f44336;
+  color: white;
+}
+
+.modal-actions button:last-child {
+  background-color: #ccc;
+}
+
+/* Notifications */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px 20px;
+  border-radius: 4px;
+  color: white;
+  z-index: 1000;
+  animation: slideIn 0.5s, fadeOut 0.5s 2.5s;
+}
+
+.notification.success {
+  background-color: #4CAF50;
+}
+
+.notification.error {
+  background-color: #f44336;
+}
+
+@keyframes slideIn {
+  from { right: -300px; opacity: 0; }
+  to { right: 20px; opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .orders-table {
+    overflow-x: auto;
+  }
+  
+  .orders-table table {
+    min-width: 800px;
+  }
+  
+  .actions-cell {
+    flex-direction: column;
+  }
+}
+
+/* Reports Table Styles */
+.reports-table {
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.reports-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.reports-table th, 
+.reports-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.reports-table th {
+  background-color: #f9f9f9;
+  font-weight: 600;
+  color: #555;
+}
+
+.reports-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.message-cell {
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .reports-table {
+    overflow-x: auto;
+  }
+  
+  .reports-table table {
+    min-width: 600px;
+  }
+}

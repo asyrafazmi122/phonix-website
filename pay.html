@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="css1.css">
+</head>
+<body>
+	<header>
+        <div class="logo">PHONIX</div>
+        <nav>
+<ul>
+				<li><a href="Home Page hehe.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#collection" class="dropbtn">Product</a>
+                    <div class="dropdown-content">
+                        <a href="product.html">All</a>
+                        <a href="productCase.html">Case</a> 
+						<a href="productPG.html">Phone Grip</a>
+                    </div>
+                </li>
+                <li><a href="aboutpage.html">About</a></li>
+                <li><a href="contact_us.html">Contact</a></li>
+                <li><a href="adminlogin.html">Admin</a></li>
+
+            </ul>        </nav>
+    </header>
+	
+	
+	
+	<div class="marquee">
+        <div class="marquee-inner">			
+			<span>*</span>
+            <span>FREE SHIPPING</span>
+			<span>*</span>
+            <span>FREE SHIPPING</span>
+            <span>*</span>
+            <span>FREE SHIPPING</span>
+			<span>*</span>
+            <span>FREE SHIPPING</span>
+			<span>*</span>
+            <span>FREE SHIPPING</span>
+			<span>*</span>
+            <span>FREE SHIPPING</span>
+			<span>*</span>
+            <span>FREE SHIPPING</span>
+			<span>*</span>
+            <span>FREE SHIPPING</span>
+			<span>*</span>
+            <span>FREE SHIPPING</span>
+			<span>*</span>
+            <span>FREE SHIPPING</span>
+			<span>*</span>
+            <span>FREE SHIPPING</span>
+			<span>*</span>
+            <span>FREE SHIPPING</span>
+			<span>*</span>
+            <span>FREE SHIPPING</span>
+			<span>*</span>
+            <span>FREE SHIPPING</span>
+			<span>*</span>
+            <span>FREE SHIPPING</span>
+
+		</div>
+    </div>
+
+
+    <section id="hero">
+        <h1></h1>
+        <p></p>
+    </section>
+
+	
+	
+	
+	<div class="container">
+    <!-- Shopping Cart Section -->
+    <div class="shopping-cart">
+      <h1>Shopping Cart.</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Phone Model</th>
+            <th>Quantity</th>
+            <th>Total Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-price="89.90">
+            <td>
+              <img src="photos/uniplan4okk.jpg" alt="Sandqvist">
+              <div class="product-info">
+                <p>. Blue Tornado</p>
+              </div>
+            </td>
+            <td>
+              <select>
+                <option>Iphone 14</option>
+                <option>Iphone 15</option>
+                <option>Iphone 16</option>
+              </select>
+            </td>
+            <td>
+              <div class="quantity">
+                <button class="decrease">-</button>
+                <input type="number" value="2" min="1">
+                <button class="increase">+</button>
+              </div>
+            </td>
+            <td class="total-price">$179.80</td>
+          </tr>
+          
+        </tbody>
+      </table>
+      <div class="cart-summary">
+        <p>Subtotal: <span id="subtotal">$89.90</span></p>
+        <p>Shipping: Free</p>
+        <h3>Total: <span id="total">$89.90</span></h3>
+      <a href="product.html">← Continue Shopping</a> </div>
+    </div>
+
+    <!-- Payment Info Section -->
+    <div class="payment-info">
+      <h2>Payment Info.</h2>
+      <form id="payment-form">
+        <div class="payment-method">
+          <label>
+            <input type="radio" name="payment" checked>
+            Credit Card
+          </label>
+          <label>
+            <input type="radio" name="payment">
+            PayPal
+          </label>
+        </div>
+        <div class="customer-details">
+          <label>Full Name: <br></label>
+          <input type="text" id="full-name" placeholder="Enter you name">
+          <label>Phone Number:<br></label>
+          <input type="text" id="phone-number" placeholder="012-3456789"><br>
+       <label>Email:<br></label>
+          <input type="text" id="email" placeholder="***********@******.com">
+        </div>
+        <br><button class="checkout-btn" type="submit">Check Out</button>
+      </form>
+    </div>	
+  </div>
+	
+
+	
+  <script src="scriptPAY.js"></script>
+</body>
+</html>

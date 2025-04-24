@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="stylesAP.css">
+    <style>
+        .info-text {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .info-text p {
+            display: flex;
+            align-items: center;
+            font-size: 1em;
+            margin: 0;
+        }
+
+        .info-text i {
+            margin-right: 10px;
+            color: #333;
+        }
+
+        .contact-info p {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+
+        .contact-info p i {
+            margin-right: 8px;
+        }
+
+        .contact-info img {
+            max-width: 300px;
+            max-height: 200px;
+            border-radius: 8px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .contact-form h2 {
+            margin-bottom: 20px;
+            color: #fff;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            border-radius: 8px;
+            width: 13%;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .form-container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 700px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .form-container label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .form-container input, 
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        .form-container .button-container {
+            text-align: right;
+        }
+
+        .form-container button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .form-container button:hover {
+            background-color: #555;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        #formFeedback {
+            display: none;
+            margin-top: 10px;
+            text-align: center;
+            padding: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">PHONIX</div>
+        <nav>
+            <ul>
+                <li><a href="Home Page hehe.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="product.html">Product</a>
+                    <div class="dropdown-content">
+                        <a href="product.html">All</a>
+                        <a href="productCase.html">Case</a> 
+                        <a href="productPG.html">Phone Grip</a>
+                    </div>
+                </li>
+                <li><a href="aboutpage.html">About</a></li>
+                <li><a href="contact_us.html">Contact</a></li>
+                <li><a href="adminlogin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contact-form">
+        <h2 class="section-title">Contact Form</h2>
+        <div class="form-container">
+            <form id="contactForm" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <div class="button-container">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+            
+            <div id="formFeedback"></div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 PHONIX. All rights reserved.</p>
+        <div class="social-icons">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById("contactForm");
+            const feedbackElement = document.getElementById("formFeedback");
+
+            form.addEventListener("submit", async function(event) {
+                event.preventDefault();
+                
+                // Show loading state
+                feedbackElement.style.display = "block";
+                feedbackElement.style.color = "#333";
+                feedbackElement.textContent = "Submitting your message...";
+                
+                try {
+                    const formData = new FormData(form);
+                    
+                    const response = await fetch('save_report.php', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    
+                    const result = await response.json();
+                    
+                    if (result.success) {
+                        feedbackElement.style.color = "green";
+                        feedbackElement.textContent = "Thank you! Your message has been submitted successfully.";
+                        form.reset();
+                    } else {
+                        feedbackElement.style.color = "red";
+                        feedbackElement.textContent = "Error: " + result.message;
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    feedbackElement.style.color = "red";
+                    feedbackElement.textContent = "An error occurred. Please try again later.";
+                }
+                
+                // Hide feedback after 5 seconds
+                setTimeout(() => {
+                    feedbackElement.style.display = "none";
+                }, 5000);
+            });
+        });
+    </script>
+</body>
+</html>

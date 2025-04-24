@@ -1,0 +1,113 @@
+/* Basic reset and body styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+
+
+.content {
+    flex: 1;
+}
+
+
+
+/* Contact Container */
+.contact-container {
+    background-color: #eeeeee;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 1000px;
+    text-align: center;
+    margin: auto;
+
+	
+}
+
+.contact-container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contact-methods {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.contact-method {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-method img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.contact-method h3 {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #333333;
+}
+
+.contact-method p {
+    font-size: 14px;
+    color: #666666;
+}
+
+.contact-method a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.contact-method a:hover {
+    background-color: #e65b00;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+}

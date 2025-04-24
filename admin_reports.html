@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PHONIX - Customer Reports</title>
+  <link rel="stylesheet" href="admin_styles.css">
+</head>
+<body>
+  <div class="admin-container">
+    <div class="header">
+      <div class="logo">CUSTOMER REPORTS</div>
+      <a href="admin_dashboard.html" class="back-btn">Back to Dashboard</a>
+    </div>
+    
+    <div class="main-content">
+      <h1 class="page-title">Customer Reports</h1>
+      
+      <div class="reports-table">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Subject</th>
+              <th>Message</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody id="reports-data">
+            <!-- Data will be loaded via JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="admin_reports.js"></script>
+</body>
+</html>

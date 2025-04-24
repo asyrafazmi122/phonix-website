@@ -1,0 +1,255 @@
+ body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color:#7B7531 ;
+    color: antiquewhite;
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif"
+}
+
+header .logo {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#collection {
+    padding: 50px 20px;
+    background-color:#ffffff ;
+    text-align: center;
+}
+
+#collection h2 {
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+	
+}
+
+
+.product-card img {
+    width: 90%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+    /* Contact Form */
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+	
+	.contact-form h2 {
+       margin-bottom: 20px;
+        color: #fff;
+		margin-top: 10px; /* Adds space above the heading */
+    margin-bottom: 10px; /* Adds space below the heading */
+	background-color: #333; /* Add your desired background color */
+    color: #fff; /* Text color to contrast with background */
+    padding: 10px 0; /* Adds space around the text */
+    border-radius: 8px; /* Optional: rounds the corners */
+    width: 13%; /* Adjust width as needed */
+    margin: 20px auto; /* Centers the title */
+	text-align:center;
+    }
+	
+	
+
+    .form-container {
+        border: 1px solid #ccc;
+        padding: 20px;
+        width: 700px;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+    }
+
+    .form-container label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    .form-container input, 
+    .form-container textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0 20px 0; /* Added bottom margin for better spacing */
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box; /* Ensures padding is within the input box */
+    }
+	
+	/* Right-aligned Submit Button */
+    .form-container .button-container {
+        text-align: right; /* Align container to the right */
+    }
+
+    .form-container button {
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        font-weight: bold;
+    }
+
+    .form-container button:hover {
+        background-color: #555;
+    }
+	
+	 a {
+        text-decoration: none;
+		color: inherit;
+    }
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+footer h5 {
+color: white;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.login-box {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

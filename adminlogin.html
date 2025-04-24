@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header>
+        <div class="logo">PHONIX</div>
+        <nav>
+            <ul>
+                <li><a href="Home Page hehe.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="product.html">Product</a>
+                    <div class="dropdown-content">
+                        <a href="product.html">All</a>
+                        <a href="productCase.html">Case</a> 
+                        <a href="productPG.html">Phone Grip</a>
+                    </div>
+                </li>
+                <li><a href="aboutpage.html">About</a></li>
+                <li><a href="contact_us.html">Contact</a></li>
+                <li><a href="adminlogin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contact-form">
+        <h2 class="section-title">Admin Login</h2>
+        <div class="form-container">
+            <form id="contactForm" action="loginAuto.php" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <div class="button-container">
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+            
+            <p id="LoginFeedback" style="display: none; color: green; margin-top:10px; text-align: center;">
+                Login successfully. Welcome Admin.
+            </p>
+        </div>
+    </div>	
+	
+    <br><br>
+	
+    <footer>
+        <p>&copy; 2024 PHONIX. All rights reserved.</p>
+        <div class="social-icons">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
